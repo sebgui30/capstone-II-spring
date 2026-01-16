@@ -73,11 +73,39 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmHRdashboard.Designer.vb">
+      <DependentUpon>frmHRdashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmHRdashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmITdashboard.Designer.vb">
+      <DependentUpon>frmITdashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmITdashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManagerDashboard.Designer.vb">
+      <DependentUpon>frmManagerDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmManagerDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOnboardingRequest.vb" />
+    <Compile Include="frmOnboardingRequest.Designer.vb">
+      <DependentUpon>frmOnboardingRequest.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRequestDetails.Designer.vb">
+      <DependentUpon>frmRequestDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRequestDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoleSelection.Designer.vb">
+      <DependentUpon>frmRoleSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoleSelection.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -98,8 +126,23 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="frmHRdashboard.resx">
+      <DependentUpon>frmHRdashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmITdashboard.resx">
+      <DependentUpon>frmITdashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagerDashboard.resx">
+      <DependentUpon>frmManagerDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOnboardingRequest.resx">
+      <DependentUpon>frmOnboardingRequest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRequestDetails.resx">
+      <DependentUpon>frmRequestDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoleSelection.resx">
+      <DependentUpon>frmRoleSelection.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
