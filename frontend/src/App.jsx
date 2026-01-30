@@ -1,9 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import HROnboarding from "./pages/HROnboarding";
+import ManagerApproval from "./pages/ManagerApproval";
+import ITProvisioning from "./pages/ITProvisioning";
+import StatusTracking from "./pages/StatusTracking";
+
 function App() {
   return (
-    <div>
-      <h1>IT Onboarding Portal</h1>
-      <p>Frontend foundation is working.</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/hr" element={<HROnboarding />} />
+        <Route path="/manager" element={<ManagerApproval />} />
+        <Route path="/it" element={<ITProvisioning />} />
+        <Route path="/status" element={<StatusTracking />} />
+      </Routes>
+    </Router>
   );
 }
 
