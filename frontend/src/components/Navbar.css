@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #374f2f;
+    padding: 1rem;
+}
+
+.nav-left,
+.nav-center,
+.nav-right {
+  flex: 1;
+}
+
+.nav-center {
+  text-align: center;
+}
+
+.nav-right {
+  text-align: right;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.user-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.user-icon:hover {
+  opacity: 75%;
+}
