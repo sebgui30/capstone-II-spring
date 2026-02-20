@@ -1,0 +1,17 @@
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.csproj.AssemblyReference.cache
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.EmployeeOnboarding.frmHRdashboard.resources
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.EmployeeOnboarding.frmITdashboard.resources
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.EmployeeOnboarding.frmManagerDashboard.resources
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.EmployeeOnboarding.frmOnboardingRequest.resources
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.EmployeeOnboarding.frmRequestDetails.resources
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.EmployeeOnboarding.frmRoleSelection.resources
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.My_Project.Resources.resources
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.csproj.GenerateResource.cache
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.AssemblyInfoInputs.cache
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.AssemblyInfo.cs
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.csproj.CoreCompileInputs.cache
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ana\Downloads\Capstone 1\Capstone 2\capstone-II-spring\obj\Debug\net9.0\OnboardingAPI.sourcelink.json
