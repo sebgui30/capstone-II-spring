@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -58,10 +58,11 @@
               "Title": "frmRequestDetails.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Seb\\Desktop\\TeamRepo\\EmployeeOnboarding\\frmRequestDetails.vb",
               "RelativeDocumentMoniker": "frmRequestDetails.vb",
-              "ToolTip": "C:\\Users\\Seb\\source\\repos\\capstone-II-spring\\EmployeeOnboarding\\frmRequestDetails.vb [Design]",
-              "RelativeToolTip": "..\\..\\..\\source\\repos\\capstone-II-spring\\EmployeeOnboarding\\frmRequestDetails.vb [Design]",
+              "ToolTip": "C:\\Users\\Seb\\Desktop\\TeamRepo\\EmployeeOnboarding\\frmRequestDetails.vb [Design]",
+              "RelativeToolTip": "frmRequestDetails.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-01-16T04:32:18.676Z"
+              "WhenOpened": "2026-01-16T04:32:18.676Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -69,10 +70,11 @@
               "Title": "frmRoleSelection.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Seb\\Desktop\\TeamRepo\\EmployeeOnboarding\\frmRoleSelection.vb",
               "RelativeDocumentMoniker": "frmRoleSelection.vb",
-              "ToolTip": "C:\\Users\\Seb\\source\\repos\\capstone-II-spring\\EmployeeOnboarding\\frmRoleSelection.vb [Design]",
-              "RelativeToolTip": "..\\..\\..\\source\\repos\\capstone-II-spring\\EmployeeOnboarding\\frmRoleSelection.vb [Design]",
+              "ToolTip": "C:\\Users\\Seb\\Desktop\\TeamRepo\\EmployeeOnboarding\\frmRoleSelection.vb [Design]",
+              "RelativeToolTip": "frmRoleSelection.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-01-16T03:44:19.173Z"
+              "WhenOpened": "2026-01-16T03:44:19.173Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -80,10 +82,11 @@
               "Title": "frmManagerDashboard.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Seb\\Desktop\\TeamRepo\\EmployeeOnboarding\\frmManagerDashboard.vb",
               "RelativeDocumentMoniker": "frmManagerDashboard.vb",
-              "ToolTip": "C:\\Users\\Seb\\source\\repos\\capstone-II-spring\\EmployeeOnboarding\\frmManagerDashboard.vb [Design]",
-              "RelativeToolTip": "..\\..\\..\\source\\repos\\capstone-II-spring\\EmployeeOnboarding\\frmManagerDashboard.vb [Design]",
+              "ToolTip": "C:\\Users\\Seb\\Desktop\\TeamRepo\\EmployeeOnboarding\\frmManagerDashboard.vb [Design]",
+              "RelativeToolTip": "frmManagerDashboard.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-01-16T04:18:58.221Z"
+              "WhenOpened": "2026-01-16T04:18:58.221Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
