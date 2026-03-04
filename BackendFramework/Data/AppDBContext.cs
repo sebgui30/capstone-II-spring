@@ -14,7 +14,7 @@ namespace OnboardingAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("placeholder");
+            modelBuilder.HasDefaultSchema("onboarding");
 
             modelBuilder.Entity<User>()
                 .HasOne(u => u.Role)
