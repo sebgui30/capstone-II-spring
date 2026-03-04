@@ -55,7 +55,8 @@ namespace OnboardingAPI.Controllers
                 LastName = dto.LastName,
                 PersonalEmail = dto.PersonalEmail,
                 StartDate = dto.StartDate,
-                Position = dto.Position
+                Department = dto.Department,
+                JobTitle = dto.JobTitle
             };
 
             _context.Employees.Add(employee);
@@ -81,7 +82,8 @@ namespace OnboardingAPI.Controllers
         [EmailAddress]
         public string? PersonalEmail { get; set; }
         public DateTime StartDate { get; set; }
-        public string? Position { get; set; }
+        public string? Department { get; set; }
+        public string? JobTitle { get; set; }
 
     }
 }
