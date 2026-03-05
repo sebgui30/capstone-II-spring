@@ -33,9 +33,10 @@ Partial Class frmHRdashboard
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label2.Location = New System.Drawing.Point(12, 9)
+        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(360, 34)
+        Me.Label2.Size = New System.Drawing.Size(540, 52)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "HR Dashboard"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -45,9 +46,10 @@ Partial Class frmHRdashboard
         Me.btnLogout.BackColor = System.Drawing.Color.MidnightBlue
         Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.Location = New System.Drawing.Point(315, 9)
+        Me.btnLogout.Location = New System.Drawing.Point(472, 14)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(57, 31)
+        Me.btnLogout.Size = New System.Drawing.Size(86, 48)
         Me.btnLogout.TabIndex = 3
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = False
@@ -56,9 +58,10 @@ Partial Class frmHRdashboard
         '
         Me.btnCreateRequest.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCreateRequest.ForeColor = System.Drawing.Color.Goldenrod
-        Me.btnCreateRequest.Location = New System.Drawing.Point(62, 69)
+        Me.btnCreateRequest.Location = New System.Drawing.Point(93, 106)
+        Me.btnCreateRequest.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnCreateRequest.Name = "btnCreateRequest"
-        Me.btnCreateRequest.Size = New System.Drawing.Size(261, 23)
+        Me.btnCreateRequest.Size = New System.Drawing.Size(392, 35)
         Me.btnCreateRequest.TabIndex = 4
         Me.btnCreateRequest.Text = "+ Create Onboarding Request"
         Me.btnCreateRequest.UseVisualStyleBackColor = True
@@ -67,25 +70,28 @@ Partial Class frmHRdashboard
         '
         Me.dgvRequests.AllowUserToAddRows = False
         Me.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRequests.Location = New System.Drawing.Point(28, 116)
+        Me.dgvRequests.Location = New System.Drawing.Point(42, 178)
+        Me.dgvRequests.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgvRequests.Name = "dgvRequests"
         Me.dgvRequests.ReadOnly = True
+        Me.dgvRequests.RowHeadersWidth = 62
         Me.dgvRequests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvRequests.Size = New System.Drawing.Size(329, 179)
+        Me.dgvRequests.Size = New System.Drawing.Size(494, 275)
         Me.dgvRequests.TabIndex = 5
         '
         'frmHRdashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
-        Me.ClientSize = New System.Drawing.Size(384, 361)
+        Me.ClientSize = New System.Drawing.Size(576, 555)
         Me.Controls.Add(Me.dgvRequests)
         Me.Controls.Add(Me.btnCreateRequest)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.Label2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmHRdashboard"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "HR Dashboard"
         CType(Me.dgvRequests, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

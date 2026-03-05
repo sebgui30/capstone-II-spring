@@ -73,7 +73,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\HRDashboardService.vb" />
     <Compile Include="Business\RoleSelectionService.vb" />
+    <Compile Include="Data\InMemoryRequestStore.vb" />
     <Compile Include="Data\SessionStore.vb" />
     <Compile Include="frmHRdashboard.Designer.vb">
       <DependentUpon>frmHRdashboard.vb</DependentUpon>
@@ -110,6 +112,8 @@
     <Compile Include="frmRoleSelection.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Models\Employee.vb" />
+    <Compile Include="Models\OnboardingRequest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
