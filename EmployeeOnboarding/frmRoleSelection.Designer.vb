@@ -24,9 +24,9 @@ Partial Class frmRoleSelection
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.grpRole = New System.Windows.Forms.GroupBox()
-        Me.radHR = New System.Windows.Forms.RadioButton()
-        Me.radManager = New System.Windows.Forms.RadioButton()
         Me.radIT = New System.Windows.Forms.RadioButton()
+        Me.radManager = New System.Windows.Forms.RadioButton()
+        Me.radHR = New System.Windows.Forms.RadioButton()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.grpRole.SuspendLayout()
         Me.SuspendLayout()
@@ -35,9 +35,10 @@ Partial Class frmRoleSelection
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label2.Location = New System.Drawing.Point(12, 9)
+        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(360, 34)
+        Me.Label2.Size = New System.Drawing.Size(540, 52)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Employee Onboarding and IT Access Portal"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -47,68 +48,76 @@ Partial Class frmRoleSelection
         Me.grpRole.Controls.Add(Me.radIT)
         Me.grpRole.Controls.Add(Me.radManager)
         Me.grpRole.Controls.Add(Me.radHR)
-        Me.grpRole.Location = New System.Drawing.Point(74, 61)
+        Me.grpRole.Location = New System.Drawing.Point(111, 94)
+        Me.grpRole.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.grpRole.Name = "grpRole"
-        Me.grpRole.Size = New System.Drawing.Size(237, 160)
+        Me.grpRole.Padding = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.grpRole.Size = New System.Drawing.Size(356, 246)
         Me.grpRole.TabIndex = 2
         Me.grpRole.TabStop = False
         Me.grpRole.Text = "Select your role"
         '
-        'radHR
+        'radIT
         '
-        Me.radHR.AutoSize = True
-        Me.radHR.Location = New System.Drawing.Point(29, 35)
-        Me.radHR.Name = "radHR"
-        Me.radHR.Size = New System.Drawing.Size(41, 17)
-        Me.radHR.TabIndex = 0
-        Me.radHR.TabStop = True
-        Me.radHR.Text = "HR"
-        Me.radHR.UseVisualStyleBackColor = True
+        Me.radIT.AutoSize = True
+        Me.radIT.Location = New System.Drawing.Point(44, 165)
+        Me.radIT.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.radIT.Name = "radIT"
+        Me.radIT.Size = New System.Drawing.Size(48, 24)
+        Me.radIT.TabIndex = 2
+        Me.radIT.TabStop = True
+        Me.radIT.Text = "IT"
+        Me.radIT.UseVisualStyleBackColor = True
         '
         'radManager
         '
         Me.radManager.AutoSize = True
-        Me.radManager.Location = New System.Drawing.Point(29, 71)
+        Me.radManager.Location = New System.Drawing.Point(44, 109)
+        Me.radManager.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.radManager.Name = "radManager"
-        Me.radManager.Size = New System.Drawing.Size(67, 17)
+        Me.radManager.Size = New System.Drawing.Size(97, 24)
         Me.radManager.TabIndex = 1
         Me.radManager.TabStop = True
         Me.radManager.Text = "Manager"
         Me.radManager.UseVisualStyleBackColor = True
         '
-        'radIT
+        'radHR
         '
-        Me.radIT.AutoSize = True
-        Me.radIT.Location = New System.Drawing.Point(29, 107)
-        Me.radIT.Name = "radIT"
-        Me.radIT.Size = New System.Drawing.Size(35, 17)
-        Me.radIT.TabIndex = 2
-        Me.radIT.TabStop = True
-        Me.radIT.Text = "IT"
-        Me.radIT.UseVisualStyleBackColor = True
+        Me.radHR.AutoSize = True
+        Me.radHR.Location = New System.Drawing.Point(44, 54)
+        Me.radHR.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.radHR.Name = "radHR"
+        Me.radHR.Size = New System.Drawing.Size(58, 24)
+        Me.radHR.TabIndex = 0
+        Me.radHR.TabStop = True
+        Me.radHR.Text = "HR"
+        Me.radHR.UseVisualStyleBackColor = True
         '
         'btnEnter
         '
         Me.btnEnter.BackColor = System.Drawing.Color.MidnightBlue
         Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnter.ForeColor = System.Drawing.Color.White
-        Me.btnEnter.Location = New System.Drawing.Point(74, 239)
+        Me.btnEnter.Location = New System.Drawing.Point(111, 368)
+        Me.btnEnter.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(237, 29)
+        Me.btnEnter.Size = New System.Drawing.Size(356, 45)
         Me.btnEnter.TabIndex = 3
         Me.btnEnter.Text = "Enter Dashboard"
         Me.btnEnter.UseVisualStyleBackColor = False
         '
         'frmRoleSelection
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
-        Me.ClientSize = New System.Drawing.Size(384, 361)
+        Me.ClientSize = New System.Drawing.Size(576, 555)
         Me.Controls.Add(Me.btnEnter)
         Me.Controls.Add(Me.grpRole)
         Me.Controls.Add(Me.Label2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmRoleSelection"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Employee Onboarding and IT Access Portal"
         Me.grpRole.ResumeLayout(False)
         Me.grpRole.PerformLayout()
