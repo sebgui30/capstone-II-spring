@@ -1,17 +1,16 @@
-Namespace Business
-    ''' <summary>
-    ''' Business layer service for the HR dashboard.
-    ''' Business responsibilities:
-    ''' - Encapsulate simple business rules and coordinate access to the Data layer.
-    ''' - Keep the presentation layer free of data-access details.
-    ''' </summary>
+Imports EmployeeOnboarding.Data
+Imports EmployeeOnboarding.EmployeeOnboarding.Data
+Imports EmployeeOnboarding.Models
+
+Namespace EmployeeOnboarding.Business
+
     Public Class HRDashboardService
-        ''' <summary>
-        ''' Return all onboarding requests from the data layer.
-        ''' Business layer can add filtering, sorting, or mapping here later.
-        ''' </summary>
-        Public Function GetAllRequests() As List(Of Models.OnboardingRequest)
-            Return Data.InMemoryRequestStore.Requests
+
+        ' Business layer method to retrieve all onboarding requests
+        Public Function GetAllRequests() As List(Of OnboardingRequest)
+            Return InMemoryRequestStore.Requests
         End Function
+
     End Class
+
 End Namespace

@@ -1,77 +1,75 @@
-﻿Imports Business
+﻿Imports EmployeeOnboarding.Models
+Imports EmployeeOnboarding.Data
 Imports EmployeeOnboarding.Business
 Imports System.Linq
+Imports EmployeeOnboarding.EmployeeOnboarding.Data
 
-Public Class frmHRdashboard
-    ''' <summary>
-    ''' Presentation layer for HR dashboard.
-    ''' UI responsibility:
-    ''' - Handle user events, call the business layer, and bind results to controls.
-    ''' - Do not perform data access directly here.
-    ''' </summary>
+Partial Public Class frmHRdashboard
 
-    ' Business service instance (presentation calls business layer only).
-    Private dashboardService As New HRDashboardService()
-
+    ' Load the requests into the grid when the dashboard opens
     Private Sub frmHRdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Seed sample data (presentation triggers the seed; data layer still owns seeding).
-        Data.InMemoryRequestStore.SeedSampleData()
 
-        ' Load and display requests in the grid.
+        ' Create test data if list is empty
+        InMemoryRequestStore.SeedTestData()
+
         LoadRequestsGrid()
+
     End Sub
 
-    ''' <summary>
-    ''' LoadRequestsGrid
-    ''' - Queries the business layer for requests.
-    ''' - Creates a simplified anonymous projection for display.
-    ''' - Binds the projection to dgvRequests for a clean read-only view.
-    ''' </summary>
-    Private Sub LoadRequestsGrid()
-        ' 1) Get raw requests from the business layer.
-        Dim requests = dashboardService.GetAllRequests()
 
-        ' 2) Ensure the grid is cleared before rebinding.
-        ' If dgvRequests is not present on the form, this will raise a runtime error.
-        ' The spec assumes a DataGridView named dgvRequests exists.
+    ' Loads all onboarding requests from the in-memory store
+    Private Sub LoadRequestsGrid()
+
+        ' Clear existing binding
         dgvRequests.DataSource = Nothing
 
-        ' 3) Create a simplified display list using LINQ Select (anonymous type).
-        Dim displayList = requests.Select(Function(r) New With {
-                                              .RequestID = r.RequestId,
-                                              .EmployeeName = String.Format("{0} {1}", r.Employee.FirstName, r.Employee.LastName),
-                                              .Department = r.Employee.Department,
-                                              .JobTitle = r.Employee.JobTitle,
-                                              .Status = r.Status,
-                                              .Manager = r.ManagerName,
-                                              .CreatedDate = r.CreatedAt
-                                          }).ToList()
+        ' Create a simplified display list
+        Dim displayList = InMemoryRequestStore.Requests.Select(Function(r) New With {
+            .RequestId = r.RequestId,
+            .EmployeeName = r.Employee.FirstName & " " & r.Employee.LastName,
+            .Department = r.Employee.Department,
+            .StartDate = r.Employee.StartDate.ToShortDateString(),
+            .Status = r.Status
+        }).ToList()
 
-        ' 4) Bind the list to the DataGridView.
-        dgvRequests.AutoGenerateColumns = True
+        ' Bind the grid
         dgvRequests.DataSource = displayList
 
-        ' 5) Small visual adjustments (presentation only).
-        dgvRequests.Refresh()
-        dgvRequests.AutoResizeColumns()
     End Sub
 
-    Private Sub btnCreateRequest_Click(sender As Object, e As EventArgs) Handles btnCreateRequest.Click
-        ' Open the onboarding request creation dialog.
-        ' The dialog is responsible for adding a new request into the Data.InMemoryRequestStore.
-        Dim frm As New frmRequestDetails()
-        frm.ShowDialog()
 
-        ' After the dialog closes, refresh the grid to show any new requests.
+    ' Open the Request Details screen
+    Private Sub btnViewDetails_Click(sender As Object, e As EventArgs) Handles btnCreateRequest.Click
+
+        ' Ensure a row is selected
+        If dgvRequests.CurrentRow Is Nothing Then
+            MessageBox.Show("Please select a request first.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
+        ' Get the RequestId from the selected row
+        Dim selectedRequestId As Integer = CInt(dgvRequests.CurrentRow.Cells("RequestId").Value)
+
+        ' Open the Request Details form with the selected ID
+        Dim detailsForm As New frmRequestDetails(selectedRequestId)
+        detailsForm.ShowDialog()
+
+        ' Reload the grid in case status changed
         LoadRequestsGrid()
+
     End Sub
 
+    ' Logout button: clear session role and return to role selection
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        ' Return to role selection (presentation action).
-        Dim frm As New frmRoleSelection()
-        frm.Show()
+        ' Clear the in-memory session role
+        Data.SessionStore.CurrentRole = String.Empty
 
-        ' Close the HR dashboard window.
+        ' Show the role selection form so the user can re-enter or choose another role
+        Dim roleForm As New frmRoleSelection()
+        roleForm.Show()
+
+        ' Close this dashboard
         Me.Close()
     End Sub
+
 End Class

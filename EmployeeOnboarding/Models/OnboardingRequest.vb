@@ -12,5 +12,8 @@ Namespace Models
         Public Property Notes As String = String.Empty
         Public Property CreatedAt As DateTime
         Public Property UpdatedAt As DateTime
+
+        ' Simple list of requested systems. Presentation reads this to populate the ListBox.
+        Public Property RequestedSystems As List(Of String) = New List(Of String)()
     End Class
 End Namespace

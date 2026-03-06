@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmhrdashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\frmhrdashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:frmhrdashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\models\\employee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:models\\employee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\frmrequestdetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:frmrequestdetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmhrdashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:frmhrdashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\business\\requestdetailsservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:business\\requestdetailsservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\business\\hrdashboardservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -21,6 +21,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\data\\inmemoryrequeststore.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:data\\inmemoryrequeststore.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\frmhrdashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:frmhrdashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\frmrequestdetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|solutionrelative:frmrequestdetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A5BEBE1-21A4-4654-BC8F-205E0856E726}|EmployeeOnboarding.vbproj|c:\\users\\ana\\downloads\\capstone 1\\capstone 2\\capstone-ii-spring\\employeeonboarding\\models\\onboardingrequest.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,14 +51,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmHRdashboard.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmHRdashboard.vb",
-              "RelativeDocumentMoniker": "frmHRdashboard.vb",
-              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmHRdashboard.vb [Design]*",
-              "RelativeToolTip": "frmHRdashboard.vb [Design]*",
+              "Title": "RequestDetailsService.vb",
+              "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Business\\RequestDetailsService.vb",
+              "RelativeDocumentMoniker": "Business\\RequestDetailsService.vb",
+              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Business\\RequestDetailsService.vb",
+              "RelativeToolTip": "Business\\RequestDetailsService.vb",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-05T21:35:35.557Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-03-06T19:42:52.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmRequestDetails.vb",
+              "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmRequestDetails.vb",
+              "RelativeDocumentMoniker": "frmRequestDetails.vb",
+              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmRequestDetails.vb",
+              "RelativeToolTip": "frmRequestDetails.vb",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAkwBAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-06T19:08:25.639Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,24 +80,11 @@
               "Title": "frmHRdashboard.vb",
               "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmHRdashboard.vb",
               "RelativeDocumentMoniker": "frmHRdashboard.vb",
-              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmHRdashboard.vb*",
-              "RelativeToolTip": "frmHRdashboard.vb*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmHRdashboard.vb",
+              "RelativeToolTip": "frmHRdashboard.vb",
+              "ViewState": "AgIAACkAAAAAAAAAAAA1wAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-04T18:36:22.219Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Employee.vb",
-              "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Models\\Employee.vb",
-              "RelativeDocumentMoniker": "Models\\Employee.vb",
-              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Models\\Employee.vb",
-              "RelativeToolTip": "Models\\Employee.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-05T22:33:04.256Z",
+              "WhenOpened": "2026-03-06T22:51:10.985Z",
               "EditorCaption": ""
             },
             {
@@ -86,9 +95,9 @@
               "RelativeDocumentMoniker": "Business\\HRDashboardService.vb",
               "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Business\\HRDashboardService.vb",
               "RelativeToolTip": "Business\\HRDashboardService.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-05T22:32:50.129Z",
+              "WhenOpened": "2026-03-06T22:58:42.852Z",
               "EditorCaption": ""
             },
             {
@@ -99,22 +108,46 @@
               "RelativeDocumentMoniker": "Data\\InMemoryRequestStore.vb",
               "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Data\\InMemoryRequestStore.vb",
               "RelativeToolTip": "Data\\InMemoryRequestStore.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowC4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-05T22:33:12.23Z",
+              "WhenOpened": "2026-03-06T22:57:34.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "frmHRdashboard.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmHRdashboard.vb",
+              "RelativeDocumentMoniker": "frmHRdashboard.vb",
+              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmHRdashboard.vb [Design]",
+              "RelativeToolTip": "frmHRdashboard.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-06T22:51:06.462Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmRequestDetails.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmRequestDetails.vb",
+              "RelativeDocumentMoniker": "frmRequestDetails.vb",
+              "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\frmRequestDetails.vb [Design]",
+              "RelativeToolTip": "frmRequestDetails.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-03-06T19:08:16.241Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "OnboardingRequest.vb",
               "DocumentMoniker": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Models\\OnboardingRequest.vb",
               "RelativeDocumentMoniker": "Models\\OnboardingRequest.vb",
               "ToolTip": "C:\\Users\\Ana\\Downloads\\Capstone 1\\Capstone 2\\capstone-II-spring\\EmployeeOnboarding\\Models\\OnboardingRequest.vb",
               "RelativeToolTip": "Models\\OnboardingRequest.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2026-03-05T22:32:59.22Z",
+              "WhenOpened": "2026-03-06T19:28:09.671Z",
               "EditorCaption": ""
             }
           ]

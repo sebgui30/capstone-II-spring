@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\HRDashboardService.vb" />
+    <Compile Include="Business\RequestDetailsService.vb" />
     <Compile Include="Business\RoleSelectionService.vb" />
     <Compile Include="Data\InMemoryRequestStore.vb" />
     <Compile Include="Data\SessionStore.vb" />
