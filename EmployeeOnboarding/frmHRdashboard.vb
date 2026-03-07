@@ -1,15 +1,14 @@
-﻿Imports EmployeeOnboarding.Models
-Imports EmployeeOnboarding.Data
-Imports EmployeeOnboarding.Business
+﻿Imports System.Drawing
 Imports System.Linq
+Imports EmployeeOnboarding.Data
 Imports EmployeeOnboarding.EmployeeOnboarding.Data
 
 Partial Public Class frmHRdashboard
 
-    ' Load the requests into the grid when the dashboard opens
+    ' Load HR dashboard
     Private Sub frmHRdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' Create test data if list is empty
+        ' Create sample data so we can visualize the system
         InMemoryRequestStore.SeedTestData()
 
         LoadRequestsGrid()
@@ -17,59 +16,110 @@ Partial Public Class frmHRdashboard
     End Sub
 
 
-    ' Loads all onboarding requests from the in-memory store
+    ' Load all onboarding requests into the grid
     Private Sub LoadRequestsGrid()
 
-        ' Clear existing binding
         dgvRequests.DataSource = Nothing
+        dgvRequests.AutoGenerateColumns = True
 
-        ' Create a simplified display list
-        Dim displayList = InMemoryRequestStore.Requests.Select(Function(r) New With {
-            .RequestId = r.RequestId,
-            .EmployeeName = r.Employee.FirstName & " " & r.Employee.LastName,
-            .Department = r.Employee.Department,
-            .StartDate = r.Employee.StartDate.ToShortDateString(),
-            .Status = r.Status
-        }).ToList()
+        Dim displayList = InMemoryRequestStore.Requests _
+            .Select(Function(r) New With {
+                .RequestId = r.RequestId,
+                .EmployeeName = r.Employee.FirstName & " " & r.Employee.LastName,
+                .Department = r.Employee.Department,
+                .StartDate = r.Employee.StartDate.ToShortDateString(),
+                .Manager = r.ManagerName,
+                .Status = r.Status
+            }).ToList()
 
-        ' Bind the grid
         dgvRequests.DataSource = displayList
+
+        dgvRequests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvRequests.ReadOnly = True
+        dgvRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvRequests.MultiSelect = False
+
+        ColorStatusRows()
 
     End Sub
 
 
-    ' Open the Request Details screen
-    Private Sub btnViewDetails_Click(sender As Object, e As EventArgs) Handles btnCreateRequest.Click
+    Private Sub ColorStatusRows()
 
-        ' Ensure a row is selected
+        For Each row As DataGridViewRow In dgvRequests.Rows
+
+            If row.Cells("Status").Value IsNot Nothing Then
+
+                Dim statusText As String = row.Cells("Status").Value.ToString().Trim().ToLower()
+
+                Select Case statusText
+
+                    Case "completed", "approved"
+                        row.Cells("Status").Style.BackColor = Color.LightGreen
+                        row.Cells("Status").Style.ForeColor = Color.Black
+
+                    Case "in progress", "inprogress"
+                        row.Cells("Status").Style.BackColor = Color.LightYellow
+                        row.Cells("Status").Style.ForeColor = Color.Black
+
+                    Case "rejected", "denied"
+                        row.Cells("Status").Style.BackColor = Color.LightCoral
+                        row.Cells("Status").Style.ForeColor = Color.Black
+
+                    Case "pending", "pending approval"
+                        row.Cells("Status").Style.BackColor = Color.LightSkyBlue
+                        row.Cells("Status").Style.ForeColor = Color.Black
+
+                    Case Else
+                        row.Cells("Status").Style.BackColor = Color.White
+                        row.Cells("Status").Style.ForeColor = Color.Black
+
+                End Select
+
+            End If
+
+        Next
+
+    End Sub
+
+
+    Private Sub btnCreateRequest_Click(sender As Object, e As EventArgs) Handles btnCreateRequest.Click
+
+        ' Open the onboarding request form
+        Dim requestForm As New frmOnboardingRequest()
+        requestForm.ShowDialog()
+
+        ' Refresh the grid after the form closes
+        LoadRequestsGrid()
+
+    End Sub
+
+
+    ' Open the request details screen
+    Private Sub btnViewDetails_Click(sender As Object, e As EventArgs) Handles btnViewDetails.Click
+
         If dgvRequests.CurrentRow Is Nothing Then
             MessageBox.Show("Please select a request first.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
 
-        ' Get the RequestId from the selected row
         Dim selectedRequestId As Integer = CInt(dgvRequests.CurrentRow.Cells("RequestId").Value)
 
-        ' Open the Request Details form with the selected ID
         Dim detailsForm As New frmRequestDetails(selectedRequestId)
         detailsForm.ShowDialog()
 
-        ' Reload the grid in case status changed
         LoadRequestsGrid()
 
     End Sub
 
-    ' Logout button: clear session role and return to role selection
-    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
-        ' Clear the in-memory session role
-        Data.SessionStore.CurrentRole = String.Empty
 
-        ' Show the role selection form so the user can re-enter or choose another role
+    ' Logout back to role selection
+    Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+
         Dim roleForm As New frmRoleSelection()
         roleForm.Show()
-
-        ' Close this dashboard
         Me.Close()
+
     End Sub
 
 End Class

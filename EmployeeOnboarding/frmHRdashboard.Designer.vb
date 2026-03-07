@@ -25,6 +25,7 @@ Partial Class frmHRdashboard
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.btnCreateRequest = New System.Windows.Forms.Button()
+        Me.btnViewDetails = New System.Windows.Forms.Button()
         Me.dgvRequests = New System.Windows.Forms.DataGridView()
         CType(Me.dgvRequests, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -66,18 +67,30 @@ Partial Class frmHRdashboard
         Me.btnCreateRequest.Text = "+ Create Onboarding Request"
         Me.btnCreateRequest.UseVisualStyleBackColor = True
         '
+        'btnViewDetails
+        '
+        Me.btnViewDetails.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewDetails.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.btnViewDetails.Location = New System.Drawing.Point(93, 148)
+        Me.btnViewDetails.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnViewDetails.Name = "btnViewDetails"
+        Me.btnViewDetails.Size = New System.Drawing.Size(392, 35)
+        Me.btnViewDetails.TabIndex = 5
+        Me.btnViewDetails.Text = "View Details"
+        Me.btnViewDetails.UseVisualStyleBackColor = True
+        '
         'dgvRequests
         '
         Me.dgvRequests.AllowUserToAddRows = False
         Me.dgvRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvRequests.Location = New System.Drawing.Point(42, 178)
+        Me.dgvRequests.Location = New System.Drawing.Point(42, 198)
         Me.dgvRequests.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgvRequests.Name = "dgvRequests"
         Me.dgvRequests.ReadOnly = True
         Me.dgvRequests.RowHeadersWidth = 62
         Me.dgvRequests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvRequests.Size = New System.Drawing.Size(494, 275)
-        Me.dgvRequests.TabIndex = 5
+        Me.dgvRequests.TabIndex = 6
         '
         'frmHRdashboard
         '
@@ -86,6 +99,7 @@ Partial Class frmHRdashboard
         Me.BackColor = System.Drawing.Color.Azure
         Me.ClientSize = New System.Drawing.Size(576, 555)
         Me.Controls.Add(Me.dgvRequests)
+        Me.Controls.Add(Me.btnViewDetails)
         Me.Controls.Add(Me.btnCreateRequest)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.Label2)
@@ -101,5 +115,6 @@ Partial Class frmHRdashboard
     Friend WithEvents Label2 As Label
     Friend WithEvents btnLogout As Button
     Friend WithEvents btnCreateRequest As Button
+    Friend WithEvents btnViewDetails As Button
     Friend WithEvents dgvRequests As DataGridView
 End Class

@@ -96,7 +96,9 @@
     <Compile Include="frmManagerDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOnboardingRequest.vb" />
+    <Compile Include="frmOnboardingRequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmOnboardingRequest.Designer.vb">
       <DependentUpon>frmOnboardingRequest.vb</DependentUpon>
       <SubType>Form</SubType>
