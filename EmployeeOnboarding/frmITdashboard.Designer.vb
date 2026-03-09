@@ -24,7 +24,7 @@ Partial Class frmITdashboard
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dgvTasks = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnLogout = New System.Windows.Forms.Button()
         CType(Me.dgvTasks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -32,9 +32,10 @@ Partial Class frmITdashboard
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label2.Location = New System.Drawing.Point(12, 9)
+        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(360, 34)
+        Me.Label2.Size = New System.Drawing.Size(540, 52)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "IT Dashboard"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -43,34 +44,38 @@ Partial Class frmITdashboard
         '
         Me.dgvTasks.AllowUserToAddRows = False
         Me.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTasks.Location = New System.Drawing.Point(14, 46)
+        Me.dgvTasks.Location = New System.Drawing.Point(21, 71)
+        Me.dgvTasks.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.dgvTasks.Name = "dgvTasks"
         Me.dgvTasks.ReadOnly = True
+        Me.dgvTasks.RowHeadersWidth = 62
         Me.dgvTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTasks.Size = New System.Drawing.Size(356, 303)
+        Me.dgvTasks.Size = New System.Drawing.Size(534, 466)
         Me.dgvTasks.TabIndex = 7
         '
-        'Button1
+        'btnLogout
         '
-        Me.Button1.BackColor = System.Drawing.Color.MidnightBlue
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(315, 9)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(57, 31)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Logout"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnLogout.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.ForeColor = System.Drawing.Color.White
+        Me.btnLogout.Location = New System.Drawing.Point(472, 14)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(86, 48)
+        Me.btnLogout.TabIndex = 8
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.UseVisualStyleBackColor = False
         '
         'frmITdashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Azure
-        Me.ClientSize = New System.Drawing.Size(384, 361)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(576, 555)
+        Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.dgvTasks)
         Me.Controls.Add(Me.Label2)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmITdashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "IT Dashboard"
@@ -81,5 +86,5 @@ Partial Class frmITdashboard
 
     Friend WithEvents Label2 As Label
     Friend WithEvents dgvTasks As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnLogout As Button
 End Class
