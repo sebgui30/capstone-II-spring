@@ -1,6 +1,6 @@
 # Employee Onboarding and IT Access Management
 
-A desktop-based app designed to streamline and track the employee onboarding process across HR, Management, and IT departments.
+A desktop-based application designed to streamline and track the employee onboarding process across HR, Management, and IT departments.
 
 ## Description
 
@@ -22,19 +22,21 @@ The Employee Onboarding and IT Access Management System is a desktop application
 ### Installation
 
 1. Clone the repo.
+   ```bash
+   git clone https://github.com/sebgui30/capstone-II-spring.git
+   cd capstone-II-spring
+   ```
 2. Set up the database.
 3. Configure the connection string.
 4. Restore dependencies.
 
-### Execution
-
 ### Run with Visual Studio
 
 1. Open the solution file (OnboardingAPI.sln).
-2. Set the main Winforms project as Startup Project.
+2. Set the main WinForms project as Startup Project.
 3. Click Start.
 
-### Step-by-Step
+### Step-by-Step Workflow
 
 1. Launch the application.
 2. Choose a role to login.
@@ -44,7 +46,7 @@ The Employee Onboarding and IT Access Management System is a desktop application
      - IT: Provisions IT access.
 5. Track onboarding status in the dashboard.
 
-## Roadmap
+## Future Considerations Roadmap
 
 - Automatic email notifications for status changes.
 - Dashboard analytics for each role.
