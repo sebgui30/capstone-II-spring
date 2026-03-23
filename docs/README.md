@@ -18,25 +18,58 @@ The Employee Onboarding and IT Access Management System is a desktop application
 - Windows 10 or later
 - Microsoft Visual Studio with .NET Desktop Development workload
 - PostgreSQL (v13 or later recommended)
+- pgAdmin or another SQL client
 
-### Installation
+## Installation
 
 1. Clone the repo.
    ```bash
    git clone https://github.com/sebgui30/capstone-II-spring.git
    cd capstone-II-spring
    ```
-2. Set up the database.
-3. Configure the connection string.
-4. Restore dependencies.
+2. Set up the database (See **Database Setup** below).
+4. Configure the connection string.
+5. Restore dependencies (NuGet packages).
 
-### Run with Visual Studio
+## Database Setup
 
-1. Open the solution file (OnboardingAPI.sln).
-2. Set the main WinForms project as Startup Project.
-3. Click Start.
+1. Open pgAdmin and create a database named: onboarding_portal.
+2. Create the following tables:
+   - employees
+   - onboarding_requests
+   - users
+   - roles
+   - onboarding_request_statuses
+   - it_tasks
+   - it_task_statuses
+3. Ensure all tables exist under the onboarding schema.
+   **Note:** SQL scripts are not included in the repository. You may need to manually create the schema or request scripts from a team member.
 
-### Step-by-Step Workflow
+### Configure Database Connection
+
+Update the connection string:
+  ```
+  Host=localhost;Port=5432;Username=postgres;Password=YOUR_PASSWORD;Database=onboarding_portal
+  ```
+
+### Steps:
+- Replace YOUR_PASSWORD.
+- Make sure PostgreSQL is running on localhost:5432
+
+### Important:
+- The connection string is hardcoded in multiple files.
+- In Visual Studio: Ctrl + Shift + F → search connStr or connString → replace all.
+
+
+## Run with Visual Studio
+
+1. Open the solution file: OnboardingAPI.sln
+2. Restore or install NuGet packages if prompted (Npgsql version 6.0.8).
+3. Set the main WinForms project as Startup Project.
+4. Build the solution: Ctrl + Shift + B (Pre-run error check).
+5. Click Start to run the application.
+
+## Step-by-Step Workflow
 
 1. Launch the application.
 2. Choose a role to login.
