@@ -43,6 +43,7 @@ The Employee Onboarding and IT Access Management System is a desktop application
    - it_tasks
    - it_task_statuses
 3. Ensure all tables exist under the onboarding schema.
+
    **Note:** SQL scripts are not included in the repository. You may need to manually create the schema or request scripts from a team member.
 
 ### Configure Database Connection
@@ -56,7 +57,7 @@ Update the connection string:
 - Replace YOUR_PASSWORD.
 - Make sure PostgreSQL is running on localhost:5432
 
-### Important:
+**Note:** 
 - The connection string is hardcoded in multiple files.
 - In Visual Studio: Ctrl + Shift + F → search connStr or connString → replace all.
 
