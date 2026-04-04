@@ -1,4 +1,4 @@
-name: CI # Generated using GitHub Copilot assistance.
+name: .NET CI # Generated using Github Copilot assistance.
 
 on:
   push:
@@ -9,9 +9,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
 
-      - name: Run a one-line script
-        run: echo "Starting the CI process..."
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
