@@ -91,6 +91,10 @@ Update the connection string:
 
 Horacio Andrade, Amber Garcia, Sebastien Guillen, Ana Gutierrez, Jerry Symbleme 
 
+## CI Workflow Badge
+
+[![.NET CI](https://github.com/sebgui30/capstone-II-spring/actions/workflows/ci.yml/badge.svg?event=pull_request)](https://github.com/sebgui30/capstone-II-spring/actions/workflows/ci.yml)
+
 ## Acknowledgements
 
 Knight Foundation School of Computing and Information Sciences (KFSCIS) — Florida International University
