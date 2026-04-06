@@ -1,15 +1,18 @@
-﻿Imports System.Drawing
+﻿Imports System.Data
+Imports System.Drawing
 Imports System.Linq
+Imports Npgsql
 Imports EmployeeOnboarding.Data
 Imports EmployeeOnboarding.EmployeeOnboarding.Data
 
 Partial Public Class frmITdashboard
 
+    Private ReadOnly connString As String = "Host=localhost;Port=5432;Username=postgres;Password=0116646;Database=onboarding_portal”
+
+
     ' Load IT dashboard when the form opens
     Private Sub frmITdashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' Seed sample data for testing if needed
-        InMemoryRequestStore.SeedTestData()
 
         ' Load requests into the grid
         LoadITRequests()
@@ -22,24 +25,53 @@ Partial Public Class frmITdashboard
         dgvTasks.DataSource = Nothing
         dgvTasks.AutoGenerateColumns = True
 
-        ' For now, IT sees all requests except rejected ones if desired.
-        ' You can change this filter later depending on your workflow.
-        Dim requestList = InMemoryRequestStore.Requests _
-            .Select(Function(r) New With {
-                .RequestId = r.RequestId,
-                .EmployeeName = r.Employee.FirstName & " " & r.Employee.LastName,
-                .Department = r.Employee.Department,
-                .StartDate = r.Employee.StartDate.ToShortDateString(),
-                .Manager = r.ManagerName,
-                .Status = r.Status
-            }).ToList()
+        Dim dt As New DataTable()
 
-        dgvTasks.DataSource = requestList
+        Using conn As New NpgsqlConnection(connString)
+            conn.Open()
+
+            Dim query As String = "
+            SELECT
+                r.request_id AS ""RequestId"",
+                e.first_name || ' ' || e.last_name AS ""EmployeeName"",
+                e.department AS ""Department"",
+                e.start_date AS ""StartDate"",
+                COALESCE(u.full_name, 'Assigned Manager') AS ""Manager"",
+                s.status_code AS ""Status""
+            FROM onboarding.onboarding_requests r
+            INNER JOIN onboarding.employees e
+                ON r.employee_id = e.employee_id
+            LEFT JOIN onboarding.users u
+                ON r.manager_user_id = u.user_id
+            INNER JOIN onboarding.onboarding_request_statuses s
+                ON r.status_id = s.status_id
+            WHERE s.status_code IN ('APPROVED', 'IN_PROGRESS', 'ON_HOLD', 'COMPLETED')
+            ORDER BY r.request_id;
+        "
+
+            Using cmd As New NpgsqlCommand(query, conn)
+                Using da As New NpgsqlDataAdapter(cmd)
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        dgvTasks.DataSource = dt
 
         dgvTasks.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvTasks.ReadOnly = True
         dgvTasks.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         dgvTasks.MultiSelect = False
+        dgvTasks.AllowUserToAddRows = False
+        dgvTasks.RowHeadersVisible = False
+        dgvTasks.BackgroundColor = Color.White
+
+        For Each col As DataGridViewColumn In dgvTasks.Columns
+            col.SortMode = DataGridViewColumnSortMode.NotSortable
+        Next
+
+
+
 
         ColorStatusRows()
 
@@ -60,7 +92,7 @@ Partial Public Class frmITdashboard
                         row.Cells("Status").Style.BackColor = Color.LightGreen
                         row.Cells("Status").Style.ForeColor = Color.Black
 
-                    Case "in progress", "inprogress"
+                    Case "in progress", "in_progress", "inprogress"
                         row.Cells("Status").Style.BackColor = Color.LightYellow
                         row.Cells("Status").Style.ForeColor = Color.Black
 
@@ -68,8 +100,12 @@ Partial Public Class frmITdashboard
                         row.Cells("Status").Style.BackColor = Color.LightCoral
                         row.Cells("Status").Style.ForeColor = Color.Black
 
-                    Case "pending", "pending approval"
+                    Case "pending", "pending approval", "pending_approval"
                         row.Cells("Status").Style.BackColor = Color.LightSkyBlue
+                        row.Cells("Status").Style.ForeColor = Color.Black
+
+                    Case "on hold", "on_hold"
+                        row.Cells("Status").Style.BackColor = Color.Khaki
                         row.Cells("Status").Style.ForeColor = Color.Black
 
                     Case Else
@@ -81,6 +117,7 @@ Partial Public Class frmITdashboard
             End If
 
         Next
+
 
     End Sub
 

@@ -1,5 +1,5 @@
 ﻿Imports EmployeeOnboarding.Business
-Imports EmployeeOnboarding.EmployeeOnboarding.Business
+Imports EmployeeOnboarding.Data
 
 Partial Public Class frmRequestDetails
     ''' <summary>
@@ -38,6 +38,16 @@ Partial Public Class frmRequestDetails
 
         ' Load the request details into the UI.
         LoadRequestDetails()
+
+        Dim currentRole As String = SessionStore.CurrentRole
+
+        If currentRole = "IT" Then
+            btnApprove.Visible = False
+            btnReject.Visible = False
+        End If
+
+
+
     End Sub
 
     ''' <summary>
@@ -81,8 +91,17 @@ Partial Public Class frmRequestDetails
             lstSystems.Items.Add("No systems requested")
         End If
 
-        ' Step 6: Display message for reviewer
-        lblMessage.Text = "Review this onboarding request and choose Approve or Reject."
+        ' Step 6: Display message based on role
+        Dim currentRole As String = SessionStore.CurrentRole
+
+        If currentRole = "IT" Then
+            btnApprove.Visible = False
+            btnReject.Visible = False
+            lblMessage.Text = "Review this onboarding request and complete the required tasks."
+        Else
+            lblMessage.Text = "Review this onboarding request and choose Approve or Reject."
+        End If
+
 
     End Sub
 
