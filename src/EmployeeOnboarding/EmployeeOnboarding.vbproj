@@ -90,6 +90,12 @@
     <Compile Include="frmITdashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmITProvision.Designer.vb">
+      <DependentUpon>frmITProvision.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmITProvision.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmManagerDashboard.Designer.vb">
       <DependentUpon>frmManagerDashboard.vb</DependentUpon>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmITdashboard.resx">
       <DependentUpon>frmITdashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmITProvision.resx">
+      <DependentUpon>frmITProvision.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManagerDashboard.resx">
       <DependentUpon>frmManagerDashboard.vb</DependentUpon>

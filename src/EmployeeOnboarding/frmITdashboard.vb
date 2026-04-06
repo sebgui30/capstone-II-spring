@@ -93,7 +93,7 @@ Partial Public Class frmITdashboard
 
         Dim selectedRequestId As Integer = CInt(dgvTasks.Rows(e.RowIndex).Cells("RequestId").Value)
 
-        Dim detailsForm As New frmRequestDetails(selectedRequestId)
+        Dim detailsForm As New frmITProvision(selectedRequestId)
         detailsForm.ShowDialog()
 
         LoadITRequests()
@@ -109,4 +109,20 @@ Partial Public Class frmITdashboard
 
     End Sub
 
+    ' Open IT provision details when clicking View Details
+    Private Sub btnViewDetails_Click(sender As Object, e As EventArgs) Handles btnViewDetails.Click
+
+        If dgvTasks.CurrentRow Is Nothing Then
+            MessageBox.Show("Please select a request first.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
+
+        Dim selectedRequestId As Integer = CInt(dgvTasks.CurrentRow.Cells("RequestId").Value)
+
+        Dim detailsForm As New frmITProvision(selectedRequestId)
+        detailsForm.ShowDialog()
+
+        LoadITRequests()
+
+    End Sub
 End Class
